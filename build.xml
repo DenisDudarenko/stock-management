@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="prac" default="fill-db">
+
+    <property name="db.url" value="jdbc:postgresql://localhost:5435/java-prac"/>
+    <property name="db.user" value="postgres"/>
+    <property name="db.password" value="postgres"/>
+    <property name="db.driver" value="org.postgresql.Driver"/>
+
+    <path id="classpath">
+        <pathelement location="libs/postgresql-42.7.0.jar"/>
+    </path>
+
+    <target name="clean-db">
+        <sql classpathref="classpath" driver="${db.driver}" url="${db.url}" userid="${db.user}" password="${db.password}">
+            <transaction  src="drop.sql"/>
+        </sql>
+    </target>
+
+    <target name="create-db" depends="clean-db">
+        <sql classpathref="classpath" driver="${db.driver}" url="${db.url}" userid="${db.user}" password="${db.password}">
+            <transaction  src="create.sql"/>
+        </sql>
+    </target>
+
+    <target name="fill-db" depends="create-db">
+        <sql classpathref="classpath" driver="${db.driver}" url="${db.url}" userid="${db.user}" password="${db.password}">
+            <transaction  src="init.sql"/>
+        </sql>
+    </target>
+
+</project>
