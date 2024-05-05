@@ -29,7 +29,7 @@ public class SuppliersAndConsumersService implements ISuppliersAndConsumersServi
     @Override
     public List<SuppliersAndConsumers> GetPaginatedSuppliersAndConsumers(GetPaginatedSuppliersAndConsumers request) {
         var suppliersAndConsumers = commonDAO.getAll();
-        if (request.getSupplierInn() != null)
+        if (request.getSupplierInn() != null && request.getSupplierInn() != "")
         {
             return suppliersAndConsumers.stream()
                     .filter(suppliersAndConsumer -> suppliersAndConsumer.getInn().equals(request.getSupplierInn()))

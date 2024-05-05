@@ -5,6 +5,7 @@ import stock.management.entities.SuppliersAndConsumers;
 import stock.management.enums.OperationType;
 
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.List;
 
 public class DeliveryAndIssuanceView {
@@ -50,12 +51,20 @@ public class DeliveryAndIssuanceView {
         this.products = products;
     }
 
+    public void setProducts() {
+        this.products = new ArrayList<>();
+    }
+
     public Timestamp getOperationTime() {
         return operationTime;
     }
 
     public void setOperationTime(Timestamp operationTime) {
         this.operationTime = operationTime;
+    }
+
+    public void setOperationTime(String operationTime) {
+        this.operationTime = Timestamp.valueOf(operationTime);
     }
 
     public OperationType getOperationType() {

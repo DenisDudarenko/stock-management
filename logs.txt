@@ -1,0 +1,335 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for dudarenko:prac:jar:0.0.1-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.jacoco:jacoco-maven-plugin is missing. @ line 83, column 12
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------------< dudarenko:prac >---------------------------
+[INFO] Building store-management 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The artifact org.hibernate:hibernate-core:jar:6.4.4.Final has been relocated to org.hibernate.orm:hibernate-core:jar:6.4.4.Final
+[INFO] 
+[INFO] --- jacoco:0.8.11:prepare-agent (default) @ prac ---
+[INFO] argLine set to -javaagent:/Users/denisdudarenko/.m2/repository/org/jacoco/org.jacoco.agent/0.8.11/org.jacoco.agent-0.8.11-runtime.jar=destfile=/Users/denisdudarenko/Coding/Prac/stock-management/StockManagement/target/jacoco.exec
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ prac ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ prac ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 35 source files with javac [debug release 21] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ prac ---
+[INFO] Copying 2 resources from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ prac ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 7 source files with javac [debug release 21] to target/test-classes
+[INFO] /Users/denisdudarenko/Coding/Prac/stock-management/StockManagement/src/test/java/stock/management/dao/DeliveryAndIssuanceDAOTests.java: /Users/denisdudarenko/Coding/Prac/stock-management/StockManagement/src/test/java/stock/management/dao/DeliveryAndIssuanceDAOTests.java uses or overrides a deprecated API.
+[INFO] /Users/denisdudarenko/Coding/Prac/stock-management/StockManagement/src/test/java/stock/management/dao/DeliveryAndIssuanceDAOTests.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- surefire:3.1.2:test (default-test) @ prac ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running stock.management.StoreManagementApplicationTests
+20:48:45.929 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [stock.management.StoreManagementApplicationTests]: StoreManagementApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+20:48:46.021 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration stock.management.StoreManagementApplication for test class stock.management.StoreManagementApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.4)
+
+2024-03-26T20:48:46.332+03:00  INFO 6682 --- [store-management] [           main] s.m.StoreManagementApplicationTests      : Starting StoreManagementApplicationTests using Java 21.0.2 with PID 6682 (started by denisdudarenko in /Users/denisdudarenko/Coding/Prac/stock-management/StockManagement)
+2024-03-26T20:48:46.333+03:00  INFO 6682 --- [store-management] [           main] s.m.StoreManagementApplicationTests      : No active profile set, falling back to 1 default profile: "default"
+2024-03-26T20:48:47.046+03:00  INFO 6682 --- [store-management] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-03-26T20:48:47.049+03:00  INFO 6682 --- [store-management] [           main] org.hibernate.cfg.Environment            : HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.highlight_sql=true, hibernate.connection.username=postgres, spring.jpa.hibernate.ddl-auto=update, hbm2ddl.auto=Enumerated, hibernate.connection.url=jdbc:postgresql://localhost:5435/java-prac, password=postgres, hibernate.show_sql=true, hibernate.current_session_context_class=thread, hibernate.connection.driver_class=org.postgresql.Driver, spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, spring.application.name=store-management, hibernate.connection.password=****, url=jdbc:postgresql://localhost:5435/java-prac, spring.datasource.password=postgres, spring.datasource.username=postgres, driver=org.postgresql.Driver, spring.datasource.url=jdbc:postgresql://localhost:5435/java-prac, username=postgres}
+2024-03-26T20:48:47.100+03:00  INFO 6682 --- [store-management] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-03-26T20:48:47.534+03:00  WARN 6682 --- [store-management] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-03-26T20:48:48.519+03:00  INFO 6682 --- [store-management] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-26T20:48:48.842+03:00  WARN 6682 --- [store-management] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-26T20:48:49.095+03:00  INFO 6682 --- [store-management] [           main] s.m.StoreManagementApplicationTests      : Started StoreManagementApplicationTests in 2.951 seconds (process running for 4.129)
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+WARNING: A Java agent has been loaded dynamically (/Users/denisdudarenko/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.12/byte-buddy-agent-1.14.12.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.725 s -- in stock.management.StoreManagementApplicationTests
+[INFO] Running stock.management.dao.CommonDAOTests
+2024-03-26T20:48:49.494+03:00  INFO 6682 --- [store-management] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [stock.management.dao.CommonDAOTests]: CommonDAOTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-03-26T20:48:49.500+03:00  INFO 6682 --- [store-management] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration stock.management.StoreManagementApplication for test class stock.management.dao.CommonDAOTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.4)
+
+2024-03-26T20:48:49.514+03:00  INFO 6682 --- [store-management] [           main] stock.management.dao.CommonDAOTests      : Starting CommonDAOTests using Java 21.0.2 with PID 6682 (started by denisdudarenko in /Users/denisdudarenko/Coding/Prac/stock-management/StockManagement)
+2024-03-26T20:48:49.515+03:00  INFO 6682 --- [store-management] [           main] stock.management.dao.CommonDAOTests      : No active profile set, falling back to 1 default profile: "default"
+2024-03-26T20:48:49.630+03:00  INFO 6682 --- [store-management] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-03-26T20:48:49.657+03:00  WARN 6682 --- [store-management] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-03-26T20:48:49.727+03:00  INFO 6682 --- [store-management] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-26T20:48:49.817+03:00  WARN 6682 --- [store-management] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-26T20:48:49.878+03:00  INFO 6682 --- [store-management] [           main] stock.management.dao.CommonDAOTests      : Started CommonDAOTests in 0.375 seconds (process running for 4.912)
+[Hibernate] 
+    select
+        p1_0.id,
+        p1_0.lifeTime,
+        p1_0.measurement,
+        p1_0.name,
+        p1_0.quantity,
+        p1_0.storage_place,
+        p1_0.type 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+[Hibernate] 
+    select
+        p1_0.id,
+        p1_0.lifeTime,
+        p1_0.measurement,
+        p1_0.name,
+        p1_0.quantity,
+        p1_0.storage_place,
+        p1_0.type 
+    from
+        products p1_0
+[Hibernate] 
+    insert 
+    into
+        products
+        (lifeTime, measurement, name, quantity, storage_place, type) 
+    values
+        (?, ?, ?, ?, ?, ?)
+[Hibernate] 
+    select
+        p1_0.id,
+        p1_0.lifeTime,
+        p1_0.measurement,
+        p1_0.name,
+        p1_0.quantity,
+        p1_0.storage_place,
+        p1_0.type 
+    from
+        products p1_0
+[Hibernate] 
+    select
+        p1_0.id,
+        p1_0.lifeTime,
+        p1_0.measurement,
+        p1_0.name,
+        p1_0.quantity,
+        p1_0.storage_place,
+        p1_0.type 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+[Hibernate] 
+    select
+        p1_0.id,
+        p1_0.lifeTime,
+        p1_0.measurement,
+        p1_0.name,
+        p1_0.quantity,
+        p1_0.storage_place,
+        p1_0.type 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+[Hibernate] 
+    select
+        p1_0.id,
+        p1_0.lifeTime,
+        p1_0.measurement,
+        p1_0.name,
+        p1_0.quantity,
+        p1_0.storage_place,
+        p1_0.type 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.918 s -- in stock.management.dao.CommonDAOTests
+[INFO] Running stock.management.dao.DeliveryAndIssuanceItemsDAOTests
+2024-03-26T20:48:50.412+03:00  INFO 6682 --- [store-management] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [stock.management.dao.DeliveryAndIssuanceItemsDAOTests]: DeliveryAndIssuanceItemsDAOTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-03-26T20:48:50.413+03:00  INFO 6682 --- [store-management] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration stock.management.StoreManagementApplication for test class stock.management.dao.DeliveryAndIssuanceItemsDAOTests
+[Hibernate] 
+    select
+        daii1_0.id,
+        daii1_0.delivery_and_issuance_id,
+        daii1_0.product_id,
+        daii1_0.quantity 
+    from
+        delivery_and_issuance_items daii1_0 
+    where
+        daii1_0.delivery_and_issuance_id=?
+[Hibernate] 
+    select
+        dai1_0.id,
+        dai1_0.operation_time,
+        dai1_0.operation_type,
+        dai1_0.owner_id,
+        o1_0.id,
+        o1_0.contact_info,
+        o1_0.inn,
+        o1_0.name 
+    from
+        delivery_and_issuance dai1_0 
+    join
+        suppliers_and_consumers o1_0 
+            on o1_0.id=dai1_0.owner_id 
+    where
+        dai1_0.id=?
+[Hibernate] 
+    select
+        p1_0.id,
+        p1_0.lifeTime,
+        p1_0.measurement,
+        p1_0.name,
+        p1_0.quantity,
+        p1_0.storage_place,
+        p1_0.type 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+[Hibernate] 
+    select
+        p1_0.id,
+        p1_0.lifeTime,
+        p1_0.measurement,
+        p1_0.name,
+        p1_0.quantity,
+        p1_0.storage_place,
+        p1_0.type 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.099 s -- in stock.management.dao.DeliveryAndIssuanceItemsDAOTests
+[INFO] Running stock.management.dao.ProductsDAOTests
+2024-03-26T20:48:50.512+03:00  INFO 6682 --- [store-management] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [stock.management.dao.ProductsDAOTests]: ProductsDAOTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-03-26T20:48:50.512+03:00  INFO 6682 --- [store-management] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration stock.management.StoreManagementApplication for test class stock.management.dao.ProductsDAOTests
+[Hibernate] 
+    select
+        p1_0.id,
+        p1_0.lifeTime,
+        p1_0.measurement,
+        p1_0.name,
+        p1_0.quantity,
+        p1_0.storage_place,
+        p1_0.type 
+    from
+        products p1_0 
+    where
+        p1_0.name=?
+[Hibernate] 
+    select
+        p1_0.id,
+        p1_0.lifeTime,
+        p1_0.measurement,
+        p1_0.name,
+        p1_0.quantity,
+        p1_0.storage_place,
+        p1_0.type 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.053 s -- in stock.management.dao.ProductsDAOTests
+[INFO] Running stock.management.dao.SuppliersAndConsumersDAOTests
+2024-03-26T20:48:50.566+03:00  INFO 6682 --- [store-management] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [stock.management.dao.SuppliersAndConsumersDAOTests]: SuppliersAndConsumersDAOTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-03-26T20:48:50.567+03:00  INFO 6682 --- [store-management] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration stock.management.StoreManagementApplication for test class stock.management.dao.SuppliersAndConsumersDAOTests
+[Hibernate] 
+    select
+        sac1_0.id,
+        sac1_0.contact_info,
+        sac1_0.inn,
+        sac1_0.name 
+    from
+        suppliers_and_consumers sac1_0 
+    where
+        sac1_0.inn=?
+[Hibernate] 
+    select
+        sac1_0.id,
+        sac1_0.contact_info,
+        sac1_0.inn,
+        sac1_0.name 
+    from
+        suppliers_and_consumers sac1_0 
+    where
+        sac1_0.id=?
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.036 s -- in stock.management.dao.SuppliersAndConsumersDAOTests
+[INFO] Running stock.management.dao.DeliveryAndIssuanceDAOTests
+2024-03-26T20:48:50.604+03:00  INFO 6682 --- [store-management] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [stock.management.dao.DeliveryAndIssuanceDAOTests]: DeliveryAndIssuanceDAOTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-03-26T20:48:50.605+03:00  INFO 6682 --- [store-management] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration stock.management.StoreManagementApplication for test class stock.management.dao.DeliveryAndIssuanceDAOTests
+[Hibernate] 
+    insert 
+    into
+        delivery_and_issuance
+        (operation_time, operation_type, owner_id) 
+    values
+        (?, ?, ?)
+[Hibernate] 
+    select
+        dai1_0.id,
+        dai1_0.operation_time,
+        dai1_0.operation_type,
+        dai1_0.owner_id,
+        o1_0.id,
+        o1_0.contact_info,
+        o1_0.inn,
+        o1_0.name 
+    from
+        delivery_and_issuance dai1_0 
+    join
+        suppliers_and_consumers o1_0 
+            on o1_0.id=dai1_0.owner_id 
+    where
+        dai1_0.id=?
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.029 s -- in stock.management.dao.DeliveryAndIssuanceDAOTests
+[INFO] Running stock.management.DatabaseConfigTests
+2024-03-26T20:48:50.635+03:00  INFO 6682 --- [store-management] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [stock.management.DatabaseConfigTests]: DatabaseConfigTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-03-26T20:48:50.635+03:00  INFO 6682 --- [store-management] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration stock.management.StoreManagementApplication for test class stock.management.DatabaseConfigTests
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in stock.management.DatabaseConfigTests
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jacoco:0.8.11:report (report) @ prac ---
+[INFO] Loading execution data file /Users/denisdudarenko/Coding/Prac/stock-management/StockManagement/target/jacoco.exec
+[INFO] Analyzed bundle 'store-management' with 27 classes
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ prac ---
+[INFO] Building jar: /Users/denisdudarenko/Coding/Prac/stock-management/StockManagement/target/prac-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:3.2.4:repackage (repackage) @ prac ---
+[INFO] Replacing main artifact /Users/denisdudarenko/Coding/Prac/stock-management/StockManagement/target/prac-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /Users/denisdudarenko/Coding/Prac/stock-management/StockManagement/target/prac-0.0.1-SNAPSHOT.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.363 s
+[INFO] Finished at: 2024-03-26T20:48:51+03:00
+[INFO] ------------------------------------------------------------------------

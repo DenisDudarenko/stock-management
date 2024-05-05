@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Информация о продукте</title>
+</head>
+<body>
+<div th:replace="~{general :: page-header}"></div>
+<div class="container">
+    <h2>Информация о продукте</h2>
+    <form action="/product/update" method="post">
+        <input type="hidden" name="id" th:value="${product.id}"/>
+        <div class="form-group">
+            <label for="productName">Название:</label>
+            <input type="text" class="form-control" id="productName" name="name" th:value="${product.name}">
+        </div>
+        <div class="form-group">
+            <label for="productType">Тип:</label>
+            <select class="form-control" id="productType" name="type">
+                <option th:each="type : ${T(stock.management.enums.ProductType).values()}"
+                        th:value="${type}" th:selected="${product.type == type}"
+                        th:text="${type}"></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="productQuantity">Количество:</label>
+            <input type="number" class="form-control" id="productQuantity" name="quantity" th:value="${product.quantity}">
+        </div>
+        <div class="form-group">
+            <label for="productMeasurement">Единицы измерения:</label>
+            <select class="form-control" id="productMeasurement" name="measurement">
+                <option th:each="unit : ${T(stock.management.enums.MeasurementUnits).values()}"
+                        th:value="${unit}" th:text="${unit}"></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="productLifeTime">Срок годности:</label>
+            <input type="text" class="form-control" id="productLifeTime" name="lifeTime" th:value="${#dates.format(product.lifeTime, 'yyyy-MM-dd HH:mm:ss')}">
+        </div>
+        <div class="form-group">
+            <label for="roomNumber">Room Number:</label>
+            <input type="number" class="form-control" id="roomNumber" name="storagePlace.roomNumber" th:value="${product.storagePlace.roomNumber}">
+        </div>
+        <div class="form-group">
+            <label for="shelfNumber">Shelf Number:</label>
+            <input type="number" class="form-control" id="shelfNumber" name="storagePlace.shelfNumber" th:value="${product.storagePlace.shelfNumber}">
+        </div>
+        <button type="submit" class="btn btn-primary">Сохранить изменения</button>
+    </form>
+</div>
+</body>
+</html>

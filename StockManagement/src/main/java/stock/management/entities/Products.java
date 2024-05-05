@@ -3,10 +3,12 @@ package stock.management.entities;
 import jakarta.persistence.*;
 import org.hibernate.annotations.JdbcTypeCode;
 import org.hibernate.type.SqlTypes;
+import org.springframework.format.annotation.DateTimeFormat;
 import stock.management.enums.MeasurementUnits;
 import stock.management.enums.ProductType;
 
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.Objects;
 
 @Entity
@@ -50,6 +52,18 @@ public class Products {
         this.storagePlace = storagePlace;
     }
 
+    public Products(Integer id, String name, ProductType type, Integer quantity,
+                    MeasurementUnits measurement, String lifeTime, StoragePlace storagePlace) {
+        this.id = id;
+        this.name = name;
+        this.type = type;
+        this.quantity = quantity;
+        this.measurement = measurement;
+        this.lifeTime = Timestamp.valueOf(lifeTime);
+        this.storagePlace = storagePlace;
+    }
+
+
     public Integer getId() {
         return id;
     }
@@ -92,6 +106,10 @@ public class Products {
 
     public Timestamp getLifeTime() {
         return lifeTime;
+    }
+
+    public void setLifeTime(String lifeTime) {
+        this.lifeTime = Timestamp.valueOf(lifeTime);
     }
 
     public void setLifeTime(Timestamp lifeTime) {

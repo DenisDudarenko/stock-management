@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Product</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<div th:replace="~{general :: page-header}"></div>
+
+<div class="container">
+    <h2>Создать новый продукт</h2>
+    <form action="/product/new" method="post" th:object="${product}">
+        <div class="form-group">
+            <label for="name">Название товара:</label>
+            <input type="text" class="form-control" id="name" name="name" th:field="*{name}">
+        </div>
+        <div class="form-group">
+            <label for="type">Тип продукта:</label>
+            <select class="form-control" id="type" name="type" th:field="*{type}">
+                <option th:each="unit : ${T(stock.management.enums.ProductType).values()}"
+                        th:value="${unit}" th:text="${unit}"></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="quantity">Количество:</label>
+            <input type="number" class="form-control" id="quantity" name="quantity" th:field="*{quantity}">
+        </div>
+        <div class="form-group">
+            <label for="measurement">Единицы измерения:</label>
+            <select class="form-control" id="measurement" name="measurement" th:field="*{measurement}">
+                <option th:each="unit : ${T(stock.management.enums.MeasurementUnits).values()}"
+                        th:value="${unit}" th:text="${unit}"></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="lifeTime">Срок годности до (yyyy-mm-dd hh:mm:ss):</label>
+            <input type="text" class="form-control" id="lifeTime" name="lifeTime" th:field="*{lifeTime}">
+        </div>
+        <div class="form-group">
+            <label for="roomNumber">Номер комнаты с товаром:</label>
+            <input type="number" class="form-control" id="roomNumber" name="storagePlace.roomNumber" th:field="*{storagePlace.roomNumber}">
+        </div>
+        <div class="form-group">
+            <label for="shelfNumber">Номер полки с товаром:</label>
+            <input type="number" class="form-control" id="shelfNumber" name="storagePlace.shelfNumber" th:field="*{storagePlace.shelfNumber}">
+        </div>
+        <button type="submit" class="btn btn-primary">Создать</button>
+    </form>
+</div>
+</body>
+</html>

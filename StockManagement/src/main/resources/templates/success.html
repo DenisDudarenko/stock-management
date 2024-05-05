@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Success</title>
+</head>
+<body>
+<div th:replace="~{general :: page-header}"></div>
+<h1>Success</h1>
+<p>The operation <span th:text="${operation}"></span> was successful for <span th:text="${type}"></span>.</p>
+</body>
+</html>

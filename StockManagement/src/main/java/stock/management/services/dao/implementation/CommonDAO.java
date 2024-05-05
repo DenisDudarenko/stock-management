@@ -75,11 +75,12 @@ public class CommonDAO<T> implements ICommonDAO<T> {
         try {
             Session session = sessionFactory.openSession();
             Transaction t = session.beginTransaction();
-            session.merge(obj);
+            session.update(obj);
             t.commit();
             session.close();
         } catch (HibernateException e) {
             e.printStackTrace();
         }
     }
+
 }

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Delivery And Issuance</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<div th:replace="~{general :: page-header}"></div>
+
+<div class="container">
+    <h2>Создать новую доставку и выдачу</h2>
+    <form action="/delivery-and-issuance/new" method="post" th:object="${deliveryAndIssuance}">
+        <div class="form-group">
+            <label for="operationTime">Время операции:(yyyy-mm-dd hh:mm:ss)</label>
+            <input type="text" class="form-control" id="operationTime" name="operationTime" th:field="*{operationTime}">
+        </div>
+        <div class="form-group">
+            <label for="operationType">Тип операции:</label>
+            <select class="form-control" id="measurement" name="operationType" th:field="*{operationType}">
+                <option th:each="unit : ${T(stock.management.enums.OperationType).values()}"
+                        th:value="${unit}" th:text="${unit}"></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="inn">ИНН:</label>
+            <input type="text" class="form-control" id="inn" name="inn" th:field="*{inn}">
+        </div>
+        <fieldset>
+            <legend>Продукты:</legend>
+            <div id="products">
+                <div class="form-group">
+                    <label for="productName0">Название товара:</label>
+                    <input type="text" class="form-control" id="productName0" name="products[0].name">
+                </div>
+                <div class="form-group">
+                    <label for="productQuantity0">Количество товара:</label>
+                    <input type="number" class="form-control" id="productQuantity0" name="products[0].quantity">
+                </div>
+            </div>
+            <button type="button" class="btn btn-secondary" onclick="addProductField()">Добавить продукт</button>
+        </fieldset>
+        <br>
+        <button type="submit" class="btn btn-primary">Создать</button>
+    </form>
+</div>
+
+<script>
+    let productIndex = 0;
+
+    function addProductField() {
+        productIndex++;
+        var productsDiv = document.getElementById("products");
+        var productField = document.createElement("div");
+        productField.innerHTML = `
+            <div class="form-group">
+                <label for="productName${productIndex}">Название товара:</label>
+                <input type="text" class="form-control" id="productName${productIndex}" name="products[${productIndex}].name">
+            </div>
+            <div class="form-group">
+                <label for="productQuantity${productIndex}">Количество товара:</label>
+                <input type="number" class="form-control" id="productQuantity${productIndex}" name="products[${productIndex}].quantity">
+            </div>
+        `;
+        productsDiv.appendChild(productField);
+    }
+</script>
+</body>
+</html>
