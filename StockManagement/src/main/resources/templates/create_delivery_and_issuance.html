@@ -19,7 +19,7 @@
         </div>
         <div class="form-group">
             <label for="operationType">Тип операции:</label>
-            <select class="form-control" id="measurement" name="operationType" th:field="*{operationType}">
+            <select class="form-control" id="operationType" name="operationType" th:field="*{operationType}">
                 <option th:each="unit : ${T(stock.management.enums.OperationType).values()}"
                         th:value="${unit}" th:text="${unit}"></option>
             </select>
